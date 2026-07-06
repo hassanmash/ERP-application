@@ -26,6 +26,7 @@
 - [Environment Variables](#environment-variables)
 - [Design Decisions](#design-decisions)
 - [Future Improvements](#future-improvements)
+- [Screenshots](#screenshots)
 
 ---
 
@@ -1485,6 +1486,18 @@ Key architectural highlights include:
 - Modular and maintainable codebase
 
 The project provides a solid foundation that can be extended into a complete ERP platform with additional business modules while preserving the existing architectural boundaries.
+
+---
+
+# Screenshots
+
+Login: <img width="1364" height="763" alt="image" src="https://github.com/user-attachments/assets/92727ed1-0928-481e-aff1-4a2713828ead" />
+
+
+All users under logged user: <img width="1368" height="739" alt="image" src="https://github.com/user-attachments/assets/b1e6648a-9c9a-4115-b0cb-f1ab11d0f948" />
+
+All activities done by a lead: <img width="1368" height="755" alt="image" src="https://github.com/user-attachments/assets/d939cf17-4d8a-4ac9-b4f6-9eeb764efdeb" />
+
 
 ---
 
