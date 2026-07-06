@@ -1,0 +1,15 @@
+info:
+  name: delete_activity
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{apiUrl}}/sales/activities/1bbb4ec0-2557-4bb1-8323-5e907ab7327f"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

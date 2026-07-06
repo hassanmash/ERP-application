@@ -1,0 +1,7 @@
+info:
+  name: platform_admin
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

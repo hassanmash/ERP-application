@@ -1,0 +1,15 @@
+info:
+  name: get_team_by_id
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{apiUrl}}/org-admin/teams/73ee20cd-37e7-4ffe-b6f6-9a6190d11014"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

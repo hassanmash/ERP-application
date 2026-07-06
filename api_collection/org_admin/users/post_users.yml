@@ -1,0 +1,25 @@
+info:
+  name: post_users
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{apiUrl}}/org-admin/users"
+  body:
+    type: json
+    data: |-
+      {
+          "Name":  "Hassan",
+          "Email":  "hassan@gmail.com",
+          "Password":  "hassan123",
+          "TeamId":  "73ee20cd-37e7-4ffe-b6f6-9a6190d11014"
+      //     "RoleId":  "",
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

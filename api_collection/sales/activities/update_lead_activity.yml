@@ -1,0 +1,23 @@
+info:
+  name: update_lead_activity
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{apiUrl}}/sales/activities/1bbb4ec0-2557-4bb1-8323-5e907ab7327f"
+  body:
+    type: json
+    data: |-
+      {
+        "Type": 1,
+        "Notes": "Initial phone call completed. done",
+        "ActivityDateTime": "2026-07-05T10:30:00Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

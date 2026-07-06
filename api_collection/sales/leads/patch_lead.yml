@@ -1,0 +1,26 @@
+info:
+  name: patch_lead
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{apiUrl}}/sales/leads/6d18e7a6-211c-4862-88a4-2a2aac67f4da"
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "John Does",
+        "MobileNumber": "9876543210",
+        "Email": "john@test.com",
+        "Source": "Facebook",
+        "Project": "Luxury Villas",
+        "AssignedUserId": "f947984a-08a5-48c4-8cb8-ca1d4b08718c"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,6 @@
+name: localhost
+variables:
+  - name: apiUrl
+    value: https://localhost:7240/api
+  - name: token
+    value: ""

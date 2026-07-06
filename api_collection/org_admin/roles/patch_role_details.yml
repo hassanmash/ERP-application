@@ -1,0 +1,27 @@
+info:
+  name: patch_role_details
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{apiUrl}}/org-admin/roles/c13e3750-1c08-4109-af41-0e6df9103c94"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "HR",
+        "permissions": {
+          "leads_view": "own",
+          "leads_assign": true,
+          "users_manage": true,
+          "dashboard_view": "own"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

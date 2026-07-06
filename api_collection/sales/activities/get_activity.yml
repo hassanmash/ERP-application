@@ -1,0 +1,15 @@
+info:
+  name: get_activity
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{apiUrl}}/sales/activities/1bbb4ec0-2557-4bb1-8323-5e907ab7327f"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

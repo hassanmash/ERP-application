@@ -1,0 +1,23 @@
+info:
+  name: organization_modules
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{apiUrl}}/platform-admin/organizations/29951f61-196c-4a68-80d8-2e1eed52c938/modules"
+  body:
+    type: json
+    data: |-
+      {
+        "EnabledModules": [
+          "SalesErp"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

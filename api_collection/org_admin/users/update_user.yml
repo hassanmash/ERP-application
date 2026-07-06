@@ -1,0 +1,25 @@
+info:
+  name: update_user
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{apiUrl}}/org-admin/users/89db3a16-14a9-4fe0-a968-31b6bbe0ce22"
+  body:
+    type: json
+    data: |-
+      {
+          "Name": "Hassan",
+          "Email": "hassan@gmail.com",
+          "IsActive": false,
+          "TeamId": "73ee20cd-37e7-4ffe-b6f6-9a6190d11014"
+      //     "RoleId":"" 
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

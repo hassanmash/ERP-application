@@ -1,0 +1,15 @@
+info:
+  name: get_organization
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{apiUrl}}/platform-admin/organizations/469b34bc-7b46-4a8a-b3e9-60466ea0cdfd"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

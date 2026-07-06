@@ -1,0 +1,21 @@
+info:
+  name: organization_status
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{apiUrl}}/platform-admin/organizations/469b34bc-7b46-4a8a-b3e9-60466ea0cdfd/status"
+  body:
+    type: json
+    data: |-
+      {
+        "Status": "Active"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: create_new_role
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{apiUrl}}/org-admin/roles"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "HR",
+        "permissions": {
+          "leads_view": "own",
+          "leads_assign": false,
+          "users_manage": true,
+          "dashboard_view": "team"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

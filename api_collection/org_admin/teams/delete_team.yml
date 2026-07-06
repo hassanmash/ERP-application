@@ -1,0 +1,15 @@
+info:
+  name: delete_team
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{apiUrl}}/org-admin/teams/56f66cb2-60f2-41ae-8305-c5ad475b104a"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

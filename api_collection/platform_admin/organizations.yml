@@ -1,0 +1,27 @@
+info:
+  name: organizations
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{apiUrl}}/platform-admin/organizations"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "HiLite Holdings",
+        "orgCode": "HILITE-HLD",
+        "description": "Primary HiLite Divisions",
+        "enabledModules": ["SalesErp", "Notifications"],
+        "adminName": "Org Admin",
+        "adminEmail": "admin@hiliteholdings.com",
+        "adminPassword": "SomePassword123"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

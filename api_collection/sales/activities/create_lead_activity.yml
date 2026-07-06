@@ -1,0 +1,24 @@
+info:
+  name: create_lead_activity
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{apiUrl}}/sales/activities"
+  body:
+    type: json
+    data: |-
+      {
+        "LeadId": "6d18e7a6-211c-4862-88a4-2a2aac67f4da",
+        "Type": 1,
+        "Notes": "Initial phone call completed.",
+        "ActivityDateTime": "2026-07-05T10:30:00Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

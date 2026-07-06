@@ -1,0 +1,50 @@
+info:
+  name: login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{apiUrl}}/auth/login"
+  body:
+    type: json
+    data: |-
+      // {
+      //   "Email": "admin@hiliteos.com",
+      //   "Password": "HiliteOSAdmin@1101"
+      // }
+      // {
+      //   "Email": "admin@hilitebuilders.com",
+      //   "Password": "SomePassword123"
+      // }
+      {
+        "Email": "admin@hiliteholdings.com",
+        "Password": "SomePassword123"
+      }
+      // {
+      //   "Email": "shahan@gmail.com",
+      //   "Password": "shahan123"
+      // }
+      // {
+      //   "Email": "hassan@gmail.com",
+      //   "Password": "hassan123"
+      // }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Parse the response body
+        const data = res.getBody();
+
+        // Safely extract the root-level token and save it
+        if (data && data.token) {
+            bru.setVar("authToken", data.token);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

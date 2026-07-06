@@ -1,0 +1,21 @@
+info:
+  name: patch_team
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{apiUrl}}/org-admin/teams/73ee20cd-37e7-4ffe-b6f6-9a6190d11014"
+  body:
+    type: json
+    data: |-
+      {
+          "name": "South Keralam"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
