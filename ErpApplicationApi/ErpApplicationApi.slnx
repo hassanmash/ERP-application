@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../Application/Application.csproj" Id="ac8af6f3-caae-4f0f-98c8-b519ad687a4b" />
+  <Project Path="../Domain/Domain.csproj" />
+  <Project Path="../Repository/Infrastructure.csproj" />
+  <Project Path="ErpApplicationApi.csproj" />
+</Solution>

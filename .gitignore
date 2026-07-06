@@ -1,0 +1,24 @@
+## Visual Studio Build Outputs (Applies to all sub-folders)
+**/bin/
+**/obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+## User-specific and backup files
+*.user
+*.csproj.user
+*.Backup.tmp
+*.suo
+*.userosscache
+*.sln.docstates
+
+## IDE Directories
+.vs/
+.vscode/
+.idea/
+
+## OS files
+.DS_Store
+Thumbs.db
