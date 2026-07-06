@@ -1032,8 +1032,52 @@ Example:
 ## Apply Migrations
 
 ```bash
-dotnet ef database update
+dotnet ef database update --project ..\Repository\Infrastructure.csproj --startup-project ErpApplicationApi.csproj
 ```
+from project root folder
+
+---
+
+## Run below SQL to seed admin
+
+```sql
+-- One-time bootstrap: creates the first platform admin so you can log in
+-- and use the (future) Platform Admin endpoints to create real organizations
+-- and org-admins through the API instead of SQL from then on.
+--
+-- Run as the postgres superuser — platform_admin users have
+-- organization_id = NULL, and this INSERT bypasses RLS naturally since
+-- we're connected as superuser (RLS doesn't apply to inserts you make
+-- directly as postgres; this is a one-time exception, not a pattern to
+-- repeat for normal data).
+ 
+INSERT INTO users (
+    id,
+    organization_id,
+    team_id,
+    role_id,
+    name,
+    email,
+    password_hash,
+    is_platform_admin,
+    is_org_admin,
+    is_active,
+    created_at
+) VALUES (
+    gen_random_uuid(),
+    NULL,                                   -- platform admins belong to no org
+    NULL,									-- team id
+    NULL,									-- role id
+    'Platform Administrator',				-- name
+    'admin@hiliteos.com',                   -- email
+    '$2a$12$NlvfZXXzmWMWPGxMAGsKsePIvu5EO/f6C0BYzj2yAtZFFhHb/Z9Bi', -- BCrypt hash password
+    true,                                   -- is_platform_admin
+    false,									-- is_org_admin
+    true,                                   -- is_active
+    now()
+);
+```
+unhashed would be: `HiliteOSAdmin@1101`
 
 ---
 
@@ -1043,10 +1087,10 @@ dotnet ef database update
 dotnet run
 ```
 
-Swagger will be available at:
+Swagger will not be available at the moment attaching the collection file to be used in Bruno application( or postman) found at:
 
 ```text
-https://localhost:<port>/swagger
+./api_collection/
 ```
 
 ---
