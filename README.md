@@ -985,7 +985,7 @@ Tenant isolation is enforced using both EF Core Global Query Filters and Postgre
 
 ## Prerequisites
 
-- .NET 8 SDK
+- .NET 10 SDK
 - PostgreSQL
 - Git
 
