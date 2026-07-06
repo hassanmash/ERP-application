@@ -25,7 +25,7 @@
 - [Setup Instructions](#setup-instructions)
 - [Environment Variables](#environment-variables)
 - [Design Decisions](#design-decisions)
-- [Future Improvements](#future-improvements)
+- [Future Enhancements](#future-enhancements)
 - [Screenshots](#screenshots)
 
 ---
